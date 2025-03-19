@@ -5,8 +5,8 @@
   // Constants & Global State
   // ==========================================================================
   const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-  const startDate = new Date(Date.UTC(2025, 1, 22));
-  const endDate = new Date(Date.UTC(2026, 1, 21));
+  const startDate = new Date(Date.UTC(2025, 0, 22));
+  const endDate = new Date(Date.UTC(2026, 0, 21));
   const BATCH_SIZE = 40; // Adjust based on API limit
   const API_URL = 'https://www.wikidata.org/w/api.php';
 
