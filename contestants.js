@@ -17,7 +17,7 @@
 		{ playerName: 'Myakka_Shoes', qid: 'Q228928', round: 15 },
 		{ playerName: 'Myakka_Shoes', qid: 'Q55610884', round: 16 },
 		{ playerName: 'Myakka_Shoes', qid: 'Q164351', round: 17 },
-		{ playerName: 'Myakka_Shoes', qid: 'Q55010', round: 18 },
+		{ playerName: 'Myakka_Shoes', qid: 'Q221289', round: 18 },
 		{ playerName: 'Myakka_Shoes', qid: 'Q181799', round: 19 },
 		{ playerName: 'Myakka_Shoes', qid: 'Q41163', round: 20 },
 		{ playerName: 'Myakka_Shoes', qid: 'Q109324', round: 21 },
