@@ -63,7 +63,7 @@
 		{ playerName: 'Malatlian', qid: 'Q553436', round: 11 },
 		{ playerName: 'Malatlian', qid: 'Q29032', round: 12 },
 		{ playerName: 'Malatlian', qid: 'Q1111542', round: 13 },
-		{ playerName: 'Malatlian', qid: 'Q381831', round: 14 },
+		{ playerName: 'Malatlian', qid: 'Q6145366', round: 14 },
 		{ playerName: 'Malatlian', qid: 'Q9094', round: 15 },
 		{ playerName: 'Malatlian', qid: 'Q1173157', round: 16 },
 		{ playerName: 'Malatlian', qid: 'Q211111', round: 17 },
