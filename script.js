@@ -1,3 +1,4 @@
+
 (function () {
   'use strict';
 
@@ -5,8 +6,8 @@
   // Constants & Global State
   // ==========================================================================
   const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
-  const startDate = new Date(Date.UTC(2025, 0, 5));
-  const endDate = new Date(Date.UTC(2026, 0, 6));
+  const startDate = new Date(Date.UTC(2026, 0, 24));
+  const endDate = new Date(Date.UTC(2027, 0, 23));
   const BATCH_SIZE = 40; // Adjust based on API limit
   const API_URL = 'https://www.wikidata.org/w/api.php';
 
@@ -45,10 +46,10 @@
     return `${monthNames[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
   }
 
-  // Parse a formatted date ("January 2, 2025") to a true UTC Date
+  // Parse a formatted date ("January 24, 2026") to a true UTC Date
   function parseFormattedDate(dateStr) {
     if (!dateStr) return null;
-    // Expected format: "January 2, 2025"
+    // Expected format: "January 24, 2026"
     const parts = dateStr.match(/(\w+)\s+(\d+),\s+(\d+)/);
     if (!parts) return null;
     const months = {
@@ -171,7 +172,7 @@
             dateOfDeath: ''
           };
         }
-        const labels = getLabel(entity);
+        const labels = entity.labels && entity.labels.en ? entity.labels.en.value : 'Data not found';
         const birthday = formatDate(entity.claims.P569 ? entity.claims.P569[0].mainsnak.datavalue.value.time : '');
         const dateOfDeath = formatDate(entity.claims.P570 ? entity.claims.P570[0].mainsnak.datavalue.value.time : '');
         return {
@@ -258,22 +259,6 @@
       document.querySelector('#graveyardTable tbody').appendChild(graveyardRow);
     }
   }
-  
-  function getLabel(entity) {
-    if (entity.labels) {
-        if (entity.labels.en) {
-            return entity.labels.en.value;
-        } else if (entity.labels.mul) { // "mul" = multiple languages
-            return entity.labels.mul.value;
-        } else {
-            // If no "en" or "mul", return the first available language:
-            const firstAvailableLang = Object.keys(entity.labels)[0];
-            return entity.labels[firstAvailableLanguage].value;
-        }
-    }
-    return 'Label not available';
-}
-
 
   // -------------------------------
   // Table Sorting Functions
@@ -454,7 +439,7 @@
 
   // Determine the player with the first (earliest) death within range
   function calculateFirstDeath() {
-    let earliestDeath = new Date(Date.UTC(2026, 0, 6)); // endDate + 1 day
+    let earliestDeath = new Date(Date.UTC(2026, 1, 24)); // endDate + 1 day
     let playerName = '';
     const rows = document.querySelectorAll('#personTable tbody tr');
 
@@ -475,7 +460,7 @@
 
   // Determine the player with the last (latest) death within range
   function calculateLastDeath() {
-    let latestDeath = new Date(Date.UTC(2025, 0, 4)); // startDate - 1 day
+    let latestDeath = new Date(Date.UTC(2027, 1, 23)); // startDate - 1 day
     let playerName = '';
     const rows = document.querySelectorAll('#personTable tbody tr');
 
