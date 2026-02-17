@@ -8,7 +8,7 @@ const settings = {
         "Malatlian": "#ffee93",
         "Aristimuno": "#adf7b6",
         "Parish Shoes": "#d6d1d1",
-        "Myakka Shoes": "#a0ced9"
+        "Myakka Shoes": "#a0ced9"}
 };
 
 const players = [
