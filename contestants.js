@@ -211,5 +211,5 @@ const players = [
 	{ playerName: 'Thomas', qid: 'Q310926', round: 22 },
 	{ playerName: 'Thomas', qid: 'Q4636', round: 23 },
 	{ playerName: 'Thomas', qid: 'Q7172170', round: 24 },
-	{ playerName: 'Thomas', qid: 'Q337375', round: 25 },
+	{ playerName: 'Thomas', qid: 'Q337375', round: 25 }
 ];
