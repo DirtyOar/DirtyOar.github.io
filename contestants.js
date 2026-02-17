@@ -1,6 +1,6 @@
 const settings = {
-    "startDate": "2026-0-24",
-    "endDate": "2027-0-23",
+    "startDate": "2026-01-24",
+    "endDate": "2027-01-23",
     "playerColors": { "Thomas": "#cdb7dc",
         "Acosta": "#68c4af",
         "Schemenauer": "#f2a6de",
