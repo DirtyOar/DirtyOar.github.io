@@ -1,14 +1,14 @@
 const settings = {
     "startDate": "2026-0-24",
     "endDate": "2027-0-23",
-    "playerColors": {{ "Thomas": "#cdb7dc",
+    "playerColors": { "Thomas": "#cdb7dc",
         "Acosta": "#68c4af",
         "Schemenauer": "#f2a6de",
         "Clancy": "#ffcf81",
         "Malatlian": "#ffee93",
         "Aristimuno": "#adf7b6",
         "Parish Shoes": "#d6d1d1",
-        "Myakka Shoes": "#a0ced9"}
+        "Myakka Shoes": "#a0ced9"
 };
 
 const players = [
