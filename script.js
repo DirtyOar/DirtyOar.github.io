@@ -439,7 +439,7 @@
 
   // Determine the player with the first (earliest) death within range
   function calculateFirstDeath() {
-    let earliestDeath = new Date(Date.UTC(2026, 1, 24)); // endDate + 1 day
+    let earliestDeath = new Date(Date.UTC(2026, 0, 24)); // endDate + 1 day
     let playerName = '';
     const rows = document.querySelectorAll('#personTable tbody tr');
 
@@ -460,7 +460,7 @@
 
   // Determine the player with the last (latest) death within range
   function calculateLastDeath() {
-    let latestDeath = new Date(Date.UTC(2027, 1, 23)); // startDate - 1 day
+    let latestDeath = new Date(Date.UTC(2027, 0, 23)); // startDate - 1 day
     let playerName = '';
     const rows = document.querySelectorAll('#personTable tbody tr');
 
@@ -560,3 +560,4 @@
     });
   });
 })();
+
