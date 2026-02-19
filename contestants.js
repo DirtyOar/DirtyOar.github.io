@@ -16,7 +16,7 @@ const settings = {
 const players = [
 	{ playerName: 'Acosta', qid: 'Q3809364', round: 1 },
 	{ playerName: 'Acosta', qid: 'Q2252', round: 2 },
-	{ playerName: 'Acosta', qid: 'Q33308204', round: 3 },
+	{ playerName: 'Acosta', qid: 'Q133308204', round: 3 },
 	{ playerName: 'Acosta', qid: 'Q919527', round: 4 },
 	{ playerName: 'Acosta', qid: 'Q7407424', round: 5 },
 	{ playerName: 'Acosta', qid: 'Q6513335', round: 6 },
