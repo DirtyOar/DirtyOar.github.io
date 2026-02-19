@@ -1,4 +1,3 @@
-
 (function () {
   'use strict';
 
@@ -46,10 +45,10 @@
     return `${monthNames[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
   }
 
-  // Parse a formatted date ("January 24, 2026") to a true UTC Date
+  // Parse a formatted date ("January 2, 2025") to a true UTC Date
   function parseFormattedDate(dateStr) {
     if (!dateStr) return null;
-    // Expected format: "January 24, 2026"
+    // Expected format: "January 2, 2025"
     const parts = dateStr.match(/(\w+)\s+(\d+),\s+(\d+)/);
     if (!parts) return null;
     const months = {
@@ -439,7 +438,7 @@
 
   // Determine the player with the first (earliest) death within range
   function calculateFirstDeath() {
-    let earliestDeath = new Date(Date.UTC(2026, 1, 24)); // endDate + 1 day
+    let earliestDeath = new Date(Date.UTC(2027, 0, 24)); // endDate + 1 day
     let playerName = '';
     const rows = document.querySelectorAll('#personTable tbody tr');
 
@@ -460,7 +459,7 @@
 
   // Determine the player with the last (latest) death within range
   function calculateLastDeath() {
-    let latestDeath = new Date(Date.UTC(2027, 1, 23)); // startDate - 1 day
+    let latestDeath = new Date(Date.UTC(2026, 0, 23)); // startDate - 1 day
     let playerName = '';
     const rows = document.querySelectorAll('#personTable tbody tr');
 
@@ -560,5 +559,3 @@
     });
   });
 })();
-
-
