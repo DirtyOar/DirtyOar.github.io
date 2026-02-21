@@ -171,7 +171,9 @@
             dateOfDeath: ''
           };
         }
-        const labels = entity.labels && entity.labels.en ? entity.labels.en.value : 'Data not found';
+        const labels = entity.labels
+  ? (entity.labels.en?.value || entity.labels['en-gb']?.value || entity.labels['en-ca']?.value || Object.values(entity.labels)[0]?.value || 'Data not found')
+  : 'Data not found';
         const birthday = formatDate(entity.claims.P569 ? entity.claims.P569[0].mainsnak.datavalue.value.time : '');
         const dateOfDeath = formatDate(entity.claims.P570 ? entity.claims.P570[0].mainsnak.datavalue.value.time : '');
         return {
